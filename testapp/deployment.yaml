@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: binarytest
+  labels:
+    app: nestjs-example
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nestjs-example
+  template:
+    metadata:
+      labels:
+        app: nestjs-example
+    spec:
+      containers:
+      - name: nestjs-example
+        image: docker.io/indongkim/argocd
+        ports:
+        - containerPort: 3000
