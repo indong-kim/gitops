@@ -9,6 +9,6 @@ spec:
     app: nestjs-example
   type: NodePort
   ports:
-  - nodePort: 3000
-    ports: 80
+  - nodePort: 31000
+    port: 80
     targetPort: 3000
